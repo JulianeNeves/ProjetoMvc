@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Entendendo MVC</title>
+</head>
+<body>
+<h1>Lista de sapatos e seus preços:</h1>
+<hr>
+<table>
+    <thead>
+    <th>Código</th>
+    <th>Nome</th>
+    <th>Preço</th>
+    <th>Preço com desconto</th>
+    </thead>
+    <tbody>
+    <tr th:each="sapato:${sapatos}">
+        <td th:text="${sapato.codigo}"></td>
+        <td th:text="${sapato.nome}"></td>
+        <td th:text="${sapato.preco}"></td>
+        <td th:text="${sapato.preco_desconto}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
